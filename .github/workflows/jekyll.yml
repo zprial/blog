@@ -1,0 +1,14 @@
+name: publish website
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  publish:
+    name: 移动 /public 文件内容到 /docs
+    runs-on: ${{ matrix.os }}
+    steps:
+      - run: mv public docs
