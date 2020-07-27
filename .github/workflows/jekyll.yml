@@ -9,6 +9,6 @@ on:
 jobs:
   publish:
     name: 移动 /public 文件内容到 /docs
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-18.04
     steps:
       - run: mv public docs
