@@ -1,0 +1,115 @@
+#layout_banner {
+  height: 420px;
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+  transition: height .3s ease;
+  @media screen and (max-width: $device-large) {
+    height: 360px
+  }
+
+  @media screen and (max-width: $device-medium) {
+    height: 280px
+  }
+  .banner-image,
+  .banner-filter {
+    position: absolute;
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+  }
+  .banner-ctx {
+    position: relative;
+    z-index: 10;
+  }
+  .banner-filter{
+    background-color: #333;
+    opacity: 0.3;
+    z-index: 2;
+  }
+}
+
+// 主页
+.banner-home {
+  padding-top: 180px;
+  text-align: center;
+  color: #fff;
+  @media screen and (max-width: $device-large) {
+    padding-top: 140px;
+  }
+
+  @media screen and (max-width: $device-medium) {
+    padding-top: 120px;
+  }
+  h1 {
+    font-weight: 300;
+    font-size: 36px;
+    letter-spacing: 2px;
+    @media screen and (max-width: $device-medium) {
+      font-size: 30px;
+    }
+  }
+  h3 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 8px;
+    letter-spacing: 5px;
+    @media screen and (max-width: $device-medium) {
+      font-size: 22px;
+    }
+  }
+  h1,
+  h3 {
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  }
+}
+
+// 文章详情页
+.banner-post{
+  color: #fff;
+  @media screen and (max-width: $device-large) {
+    padding:0 20px;
+  }
+  > h1 {
+    margin: 140px 0 32px;
+    color: #fff;
+    font-size: 32px;
+    line-height: (42px / 32px);
+    @media screen and (max-width: $device-medium) {
+      font-size: 20px;
+      margin-top: 100px;
+      margin-bottom: 16px;
+    }
+  }
+  .post-meta{
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    .item{
+      font-size: 16px;
+      color: #fff;
+      margin-right: 15px;
+      opacity: .9;
+    }
+    .iconfont{
+      margin-right: 6px;
+    }
+  }
+  .post-tags{
+    display: flex;
+    flex-wrap: wrap;
+    li{
+      margin-right: 10px;
+    }
+    a {
+      @extend %tag;
+      font-size: 14px;
+      color: #fff;
+      background-color: rgba(255, 255, 255, .26);
+    }
+  }
+}

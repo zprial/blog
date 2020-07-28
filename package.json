@@ -19,7 +19,20 @@
     "react-dom": "^16.12.0"
   },
   "devDependencies": {
-    "prettier": "2.0.5"
+    "@types/lodash": "^4.14.158",
+    "classnames": "^2.2.6",
+    "gatsby-plugin-postcss": "^2.3.11",
+    "gatsby-plugin-sass": "^2.3.12",
+    "gatsby-plugin-typescript": "^2.4.16",
+    "gatsby-remark-copy-linked-files": "^2.3.11",
+    "gatsby-remark-prismjs": "^3.5.10",
+    "gatsby-remark-smartypants": "^2.3.10",
+    "gatsby-source-filesystem": "^2.3.23",
+    "gatsby-transformer-remark": "^2.8.26",
+    "node-sass": "^4.14.1",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "2.0.5",
+    "prismjs": "^1.20.0"
   },
   "repository": {
     "type": "git",

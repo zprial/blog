@@ -1,0 +1,103 @@
+.homepage{
+    display: flex;
+    &-aside{
+        width: 240px;
+        @media screen and (max-width: 960px) {
+            display: none;
+        }
+        &_card {
+            @extend %card;
+            padding: 30px 20px;
+            background-color: #fff;
+        }
+        .author {
+            text-align: center;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #e7eaf1;
+            >img {
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+            }
+            h5{
+                font-size: 16px;
+                color: #4e4e4e;
+                font-weight: 500;
+                margin: 12px 0 6px;
+            }
+            p{
+                font-size: 14px;
+                line-height: 20px;
+            }
+            .icons{
+                margin-top: 12px;
+            }
+        }
+        .tags{
+            padding-top: 25px;
+            a {
+                @extend %tag;
+            }
+            li{
+                display: inline-block;
+                margin: 0 8px 8px 0;
+            }
+        }
+    }
+    &-articles{
+        flex: 1;
+        margin-right: 35px;
+        @media screen and (max-width: 960px) {
+            margin: 0 20px;
+        }
+    }
+    .article-item{
+        @extend %card;
+        padding: 25px 20px;
+        background-color: #fff;
+        margin-bottom: 16px;
+        .post-cover{
+            max-height: 300px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+        .post-title{
+            color: #4e4e4e;
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: normal;
+            margin-bottom: 8px;
+        }
+        .post-info{
+            font-size: 16px;
+            line-height: 26px;
+        }
+        .post-preview{
+            margin-bottom: 16px;
+        }
+        .post-meta{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .tags{
+                flex: 1;
+                li{
+                    display: inline-block;
+                }
+                a{
+                    @extend %tag;
+                    margin: 0 8px 8px 0;
+                }
+            }
+            .date{
+                color: #a9b0bc;
+                font-size: 16px;
+                letter-spacing: .6px;
+                line-height: 22px;
+            }
+            .icon-date{
+                margin-right: 6px;
+            }
+        }
+    }
+}

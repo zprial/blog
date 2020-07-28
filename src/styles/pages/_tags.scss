@@ -1,0 +1,27 @@
+.tag-list{
+    @extend %card;
+    padding: 30px 45px;
+    li{
+        margin: 16px 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        a:hover{
+            color: #000;
+        }
+    }
+}
+.tag-all-link{
+    text-align: center;
+    margin-top: 35px;
+}
+
+.tagPage{
+    li {
+        @extend %tag;
+        margin: 0 5px;
+        color: #666;
+        font-size: 16px;
+        padding: 2px 10px 4px;
+    }
+}

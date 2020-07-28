@@ -1,0 +1,49 @@
+%_headerColor {
+  color: #fff;
+  opacity: 0.7;
+}
+
+#layout-header {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  will-change: transform, background-color;
+  transition: transform 0.6s ease, background-color 0.6s ease;
+  &.hide {
+    transform: translate3d(0, -100%, 0);
+  }
+  &.white {
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 12px;
+    h2,
+    li a {
+      color: #666;
+      opacity: 1;
+    }
+  }
+  h2 {
+    @extend %_headerColor;
+  }
+  ul {
+    display: flex;
+  }
+  li {
+    padding: 0 15px;
+    a {
+      @extend %_headerColor;
+      display: inline-block;
+      padding: 2px 8px 4px;
+      border-radius: 2px;
+      transition: opacity 0.3s ease;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
