@@ -58,5 +58,5 @@ module.exports = {
     },
     `gatsby-plugin-typescript`
   ],
-  pathPrefix: `/blog`,
+  pathPrefix: ``,
 }
