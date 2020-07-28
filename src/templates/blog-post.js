@@ -2,9 +2,11 @@
  * 博客文章模板
  */
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import Main from '../components/main';
 import Banner from '../components/banner';
+
+import "../styles/index.scss";
 
 export default ({ data, pathContext }) => {
   const post = data.markdownRemark;

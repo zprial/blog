@@ -3,8 +3,11 @@
  */
 import React from "react";
 import Link from "gatsby-link";
+import { graphql } from "gatsby";
 import Main from '../components/main';
 import Banner from '../components/banner';
+
+import "../styles/index.scss";
 
 export default ({ pathContext, data }) => {
   const { tag } = pathContext;

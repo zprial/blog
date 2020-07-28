@@ -10,6 +10,8 @@ import Main from '../components/main';
 import Banner from '../components/banner';
 import { TagGroupProps } from '../types';
 
+import "../styles/index.scss";
+
 export default ({data}: any) => {
     const group: Array<TagGroupProps> = get(data, "allMarkdownRemark.group") || [];
     return <div className="tagPage">
