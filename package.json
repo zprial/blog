@@ -5,13 +5,13 @@
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby build --prefix-paths",
+    "build": "gatsby build --prefix-paths && npm run copy:html",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "copy:html": "cpx \"src/pages/**/*.html\" public"
   },
   "dependencies": {
     "gatsby": "^2.23.12",
@@ -21,6 +21,7 @@
   "devDependencies": {
     "@types/lodash": "^4.14.158",
     "classnames": "^2.2.6",
+    "cpx": "^1.5.0",
     "gatsby-plugin-postcss": "^2.3.11",
     "gatsby-plugin-sass": "^2.3.12",
     "gatsby-plugin-typescript": "^2.4.16",
