@@ -24,13 +24,7 @@ jobs:
           git config user.email 'zprial@google.com'
           git add .
           git commit -m 'clear old files'
-      
-      - name: commit rm files
-        uses: EndBug/add-and-commit@v4
-        env:
-          # This is necessary in order to push a commit to the repo
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged   
-          GITHUB_REF: 'gh-pages'
+          git push
        
   build-and-deploy:
     runs-on: ubuntu-latest
