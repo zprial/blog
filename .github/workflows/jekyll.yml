@@ -23,6 +23,7 @@ jobs:
           ls
           git add .
           git commit -m 'remove useless files'
+          git push
        
   build-and-deploy:
     runs-on: ubuntu-latest
