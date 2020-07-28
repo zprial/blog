@@ -16,9 +16,10 @@ jobs:
           ref: 'gh-pages'
           
       - name: clean
-        run: rm -rf `ls | grep -v CNAME`
+        run: |
+          ls
+          rm -rf `ls | grep -v CNAME`
        
-        
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
